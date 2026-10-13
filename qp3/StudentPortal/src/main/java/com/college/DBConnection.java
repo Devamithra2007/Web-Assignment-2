@@ -1,0 +1,19 @@
+package com.college;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class DBConnection {
+
+    // Database connection details
+    private static final String URL =
+        "jdbc:mysql://localhost:3306/student_portal";
+    private static final String USER = "root";
+    private static final String PASSWORD = "";
+
+    public static Connection getConnection() throws SQLException {
+        // Establish a connection to MySQL
+        return DriverManager.getConnection(URL, USER, PASSWORD);
+    }
+}
